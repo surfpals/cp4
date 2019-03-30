@@ -20,33 +20,10 @@
         <p></p>
         <button @click="upload">Post</button>
       </div>
-      <div class="upload" v-if="addItem">
+      <div class="upload" v-if="addPost">
         <h2>Thanks for posting!!</h2>
         <br>
         <a href="/index.html">Return to posts</a>
-      </div>
-    </div>
-    <div class="heading">
-      <h2>want to remove or fix a post?</h2>
-    </div>
-    <div class="edit">
-      <div class="form">
-        <input v-model="findTitle" placeholder="Search">
-        <div class="suggestions" v-if="suggestions.length > 0">
-          <div class="suggestion" v-for="s in suggestions" @click="selectItem(s)">{{s.title}}
-          </div>
-        </div>
-      </div>
-      <div class="upload" v-if="findItem">
-        <input v-model="findItem.title">
-        <br />
-        <br />
-        <textarea v-model="findItem.description"></textarea>
-        <p></p>
-      </div>
-      <div class="actions" v-if="findItem">
-        <button @click="deleteItem(findItem)">Delete</button>
-        <button @click="editItem(findItem)">Edit</button>
       </div>
     </div>
   </div>
